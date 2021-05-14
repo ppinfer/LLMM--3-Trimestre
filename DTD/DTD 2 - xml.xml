@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE books [
+<!ELEMENT books (book*)>
+<!ELEMENT book (name, phone, e-mail, company)>
+    <!ELEMENT name (#PCDATA)>
+    <!ATTLIST book address (street|no|zip|country) #REQUIRED>
+    <!ELEMENT phone (#PCDATA)>
+    <!ELEMENT e-mail (#PCDATA)*>
+    <!ELEMENT company (comp_name, list)>
+    <!ELEMENT comp_name (#PCDATA)>
+    <!ELEMENT list (site, URL)>
+    <!ELEMENT site (#PCDATA)>
+    <!ELEMENT URL (#PCDATA)>
+]>
+
+<books>
+  <book address="street">
+    <name>Alba Parra</name>
+    <phone>756-158-875</phone>
+    <e-mail>Alba_p95@gmail.com</e-mail>
+    <company>
+      <comp_name>ParraSA</comp_name>
+      <list>
+        <site>Parra_SA</site>
+        <URL>https://www.instagram.net</URL>
+      </list>
+    </company>
+  </book>
+    <book address="street">
+    <name>Cecilio Martínez</name>
+    <phone>345-332-345</phone>
+    <e-mail>CeciGamer@gmail.com</e-mail>
+    <company>
+      <comp_name>Akatsuki</comp_name>
+      <list>
+        <site>xyzt_world</site>
+        <URL>https://www.xyzt_worl.com</URL>
+      </list>
+    </company>
+  </book>
+</books>

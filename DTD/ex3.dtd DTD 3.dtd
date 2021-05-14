@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cd_review_list [
+<!ELEMENT cd_review_list (cd_review*)>
+<!ELEMENT cd_review (author, review, author, cd)*>
+    <!ELEMENT review (#PCDATA)>
+    <!ELEMENT cd (author, title)*>
+        <!ELEMENT title (#PCDATA)>
+        <!ELEMENT author (#PCDATA)>
+]>

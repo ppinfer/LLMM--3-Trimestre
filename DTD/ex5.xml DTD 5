@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE NEWSPAPER [
+    <!ELEMENT NEWSPAPER (ARTICLE+)>
+        <!ELEMENT ARTICLE (HEADLINE,BYLINE,BODY,NOTES)>
+            <!ELEMENT HEADLINE (#PCDATA)>
+            <!ELEMENT BYLINE (#PCDATA)>
+            <!ELEMENT BODY (#PCDATA)>
+            <!ELEMENT NOTES (#PCDATA)>
+            <!ATTLIST ARTICLE AUTHOR CDATA #REQUIRED>
+            <!ATTLIST ARTICLE DATE CDATA #IMPLIED>
+        <!ENTITY NEWSPAPER "Vervet Logic Times">
+        <!ENTITY PUBLISHER "Vervet Logic Press">
+        <!ENTITY COPYRIGHT "Copyright 1998 Vervet Logic Press">
+]>
+
+<NEWSPAPER>
+    <ARTICLE AUTHOR="Author_1" DATE="2020-11-05">
+        <HEADLINE>
+        Headline 1
+        </HEADLINE>
+        <BYLINE>
+        Byline 1
+        </BYLINE>
+        <BODY>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam convallis ligula euismod arcu congue pulvinar. Vivamus aliquam consectetur euismod. Donec in diam quis felis lobortis pretium.
+        </BODY>
+        <NOTES>
+Maecenas at vehicula odio, eget mollis sapien. Sed id diam quis nibh maximus tincidunt vel et tellus. Maecenas tincidunt ipsum a velit dictum, sit amet placerat purus egestas. Vestibulum eget mattis ex, sed euismod elit. Suspendisse id enim velit. Praesent ut luctus elit. 
+        </NOTES>
+    </ARTICLE>
+
+    <ARTICLE AUTHOR="Author_2" DATE="2020-12-05">
+        <HEADLINE>
+        Headline 2
+        </HEADLINE>
+        <BYLINE>
+        Byline 2
+        </BYLINE>
+        <BODY>
+        Nunc a leo elementum, dignissim sapien eget, pretium libero. Donec egestas dictum velit, vitae volutpat mi cursus in.!
+        </BODY>
+        <NOTES>
+Donec elementum gravida risus, faucibus ornare risus dignissim eu.
+        </NOTES>
+    </ARTICLE>
+
+</NEWSPAPER>

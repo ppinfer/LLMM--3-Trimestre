@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE books [
+<!ELEMENT books (book*)>
+<!ELEMENT book (name, address, phone, e-mail, age)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT address (#PCDATA)>
+    <!ELEMENT phone (#PCDATA)>
+    <!ELEMENT e-mail (#PCDATA)>
+    <!ELEMENT age (#PCDATA)>
+    <!ATTLIST book status (C|S|V|D) #REQUIRED>
+]>
+
+<books>
+  <book status="C">
+    <name>Manuel Carrasco</name>
+    <address>Calle Lorca 1,A</address>
+    <phone>999-666-555</phone>
+    <e-mail>Mclibre@gmail.com</e-mail>
+    <age>35</age>
+  </book>
+   <book status="C">
+    <name>Ana Martinetti</name>
+    <address>Avenida La Esquina 34</address>
+    <phone>684-123-682</phone>
+    <e-mail>randomness@gmail.com</e-mail>
+    <age>15</age>
+  </book>
+</books>
