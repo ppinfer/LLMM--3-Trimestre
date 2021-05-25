@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+
+  <xsl:template match="universidad">
+  
+      <html>
+      <head></head>
+      <body>
+        <header><h1>Student List</h1></header>
+        <table border="1">
+          <tr>
+            <td>Nombre</td>
+            <td>1º Apellido</td>
+            <td>2º Apellido</td>
+          </tr>
+         <xsl:apply-templates select="@nombre">
+        </table>
+        
+      </body>
+    </html>
+  </xsl:template>
+
+  <xsl:template match="alumno">
+    <tr>
+      <td><xsl:value-of select="nombre"/></td>
+      <td><xsl:value-of select="apellido1"/></td>
+      <td><xsl:value-of select="apellido2"/></td>
+    </tr>
+  </xsl:template>
+
+</xsl:stylesheet>
