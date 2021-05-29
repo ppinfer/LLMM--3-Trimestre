@@ -1,0 +1,32 @@
+
+
+
+
+1- Muestra el nombre de los productos del departamento “ACC” ordenador por nombre
+
+for $x in doc("catalog.xml")/catalog/product[@dept="ACC"]
+order by $x/name
+return $x/name
+
+2- Muestra el resultado anterior usando una lista no numerada de html
+
+
+
+3- Muestra los productos del departamento “WMN” entre etiquetas <women> y las del departamento “MEN” entre etiquetas <men>
+
+return if ($x/@dept="WMN")
+then <women>{data($x/name)}</women>
+else <men>{data($x/name)}</men>
+
+4- Muestra los productos del departamento “ACC” entre etiquetas <accnumber> y el resto usando etiquetas etiquetas <cod>
+
+for $x in doc("catalog.xml")/catalog/product
+return if ($x/@dept="ACC")
+then <accnumber>{data($x/name)}</accnumber>
+else <cod>{data($x/name)}</cod>
+
+5- Muestra los productos del departamento “ACC”
+
+doc("catalog.xml")/catalog/product[@dept="ACC"]
+
+
